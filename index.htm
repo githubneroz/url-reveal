@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="static/bundle.min.css">
+        <title>Pastitude</title>
+    </head>
+    <body>
+        
+            <div id="bar">
+                <ul class="settings-bar">
+                    <li>
+                        <label class="container-radio">Destroy after
+                            <input type="radio" name="expiration" value="time-expiration" checked="">
+                            <span class="checkmark-radio"></span>
+                        </label>
+                        <select id="destroy-timeout">
+                            <option value="15">15 minutes</option>
+                            <option value="60">1 hour</option>
+                            <option value="1440" selected="">1 day</option>
+                            <option value="10080">1 week</option>
+                            <option value="302400">1 month</option>
+                            <option value="110376000">1 year</option>
+                        </select>
+                        <label class="container-radio">Destroy when opened
+                            <input type="radio" name="expiration" value="destory-after-open">
+                            <span class="checkmark-radio"></span>
+                        </label>
+                    </li>
+                    <li>|</li>
+                    <li>
+                        <label class="container-radio">Encrypt with auto-generated key
+                            <input type="radio" class="encryption" name="encryption" value="auto-generated" checked="">
+                            <span class="checkmark-radio"></span>
+                        </label>
+                        <label class="container-radio">Encrypt with password:
+                            <input type="radio" class="encryption" name="encryption" value="password">
+                            <span class="checkmark-radio"></span>
+                        </label>
+                        <input type="password" id="password">
+                    </li>
+                    
+                    <li style="float:right">
+                        
+                        <input type="button" id="switch-vim-mode" value="Vim mode">
+                        <input type="button" id="save" value="Save">
+                    </li>
+                </ul>
+                <ul id="file-tabs" class="settings-bar">
+                    <li><select id="language" name="language"></select></li>
+                    <li>|</li>
+                    <li>
+                        File name: <input type="text" id="file-name" value="Untitled 1">
+                    </li>
+                    <li><input type="button" id="new-file" value="+ New file"></li>
+                </ul>
+            </div>
+        
+        <div id="editor"></div>
+        <script src="static/bundle.min.js"></script>
+    </body>
+</html>
